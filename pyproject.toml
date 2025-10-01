@@ -1,0 +1,15 @@
+[project]
+name = "trick-xor-treat"
+version = "0.0.0"
+requires-python = ">=3.11.6"
+dependencies = [
+    "manim>=0.19.0",
+    "manim-voiceover-fixed[elevenlabs]>=0.3.10",
+    "setuptools>=80.9.0",
+]
+
+[tool.ruff]
+ignore = [
+    "F403", # undefined-local-with-import-star
+    "F405", # undefined-local-with-import-star-usage
+]

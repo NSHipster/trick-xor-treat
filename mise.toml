@@ -1,0 +1,22 @@
+[tools]
+python = '3.13'
+uv = 'latest'
+
+[env]
+_.file = { path = "./env", redact = true }
+PYTHONWARNINGS = "ignore"
+
+[vars]
+scene = 'TrickXORTreat'
+
+[tasks.setup]
+run = 'brew bundle'
+
+[tasks.preview]
+run = [
+    'killall -q "QuickTime Player" || true',
+    'uv run manim -pql scene.py {{vars.scene}}',
+]
+
+[tasks.render]
+run = 'uv run manim scene.py {{vars.scene}}'
