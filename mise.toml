@@ -13,10 +13,7 @@ scene = 'TrickXORTreat'
 run = 'brew bundle'
 
 [tasks.preview]
-run = [
-    'killall -q "QuickTime Player" || true',
-    'uv run manim -pql scene.py {{vars.scene}}',
-]
+run = 'uv run manim -pql scene.py {{vars.scene}}'
 
 [tasks.render]
 run = 'uv run manim scene.py {{vars.scene}}'
